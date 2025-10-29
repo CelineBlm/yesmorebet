@@ -45,16 +45,25 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const pages: Record<Page, JSX.Element> = {
-    home: <Home onNavigate={handleNavigate} currentPage={currentPage} />,
-    prestations: <Prestations onNavigate={handleNavigate} currentPage={currentPage} />,
-    galerie: <Galerie onNavigate={handleNavigate} currentPage={currentPage} />,
-    contact: <Contact onNavigate={handleNavigate} currentPage={currentPage} />,
-    faq: <FAQ onNavigate={handleNavigate} currentPage={currentPage} />,
-    "mentions-legales": <MentionsLegales onNavigate={handleNavigate} currentPage={currentPage} />,
-    "politique-confidentialite": <PolitiqueConfidentialite onNavigate={handleNavigate} currentPage={currentPage} />,
-    cgv: <CGV onNavigate={handleNavigate} currentPage={currentPage} />,
-  };
-
-  return pages[currentPage];
+  // Render current page component
+  switch (currentPage) {
+    case "home":
+      return <Home onNavigate={handleNavigate} currentPage={currentPage} />;
+    case "prestations":
+      return <Prestations onNavigate={handleNavigate} currentPage={currentPage} />;
+    case "galerie":
+      return <Galerie onNavigate={handleNavigate} currentPage={currentPage} />;
+    case "contact":
+      return <Contact onNavigate={handleNavigate} currentPage={currentPage} />;
+    case "faq":
+      return <FAQ onNavigate={handleNavigate} currentPage={currentPage} />;
+    case "mentions-legales":
+      return <MentionsLegales onNavigate={handleNavigate} currentPage={currentPage} />;
+    case "politique-confidentialite":
+      return <PolitiqueConfidentialite onNavigate={handleNavigate} currentPage={currentPage} />;
+    case "cgv":
+      return <CGV onNavigate={handleNavigate} currentPage={currentPage} />;
+    default:
+      return <Home onNavigate={handleNavigate} currentPage={currentPage} />;
+  }
 }

@@ -4,6 +4,7 @@ import svgPaths from "../imports/svg-jntku4h6x1";
 
 interface CGVProps {
   onNavigate: (page: string) => void;
+  currentPage: string;
 }
 
 interface SectionProps {
@@ -18,13 +19,13 @@ function Section({ iconPaths, title, children }: SectionProps) {
       <div className="flex items-center gap-3 mb-6">
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
           {iconPaths.map((path, idx) => (
-            <path 
-              key={idx} 
-              d={path} 
-              stroke="#FDC700" 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth="2" 
+            <path
+              key={idx}
+              d={path}
+              stroke="#FDC700"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
             />
           ))}
         </svg>
@@ -37,10 +38,10 @@ function Section({ iconPaths, title, children }: SectionProps) {
   );
 }
 
-export function CGV({ onNavigate }: CGVProps) {
+export function CGV({ onNavigate, currentPage }: CGVProps) {
   return (
     <div className="min-h-screen bg-black">
-      <Header onNavigate={onNavigate} />
+      <Header onNavigate={onNavigate} currentPage={currentPage} />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-[rgba(115,62,10,0.1)] to-[rgba(0,0,0,0)] pt-32 pb-16 px-4">

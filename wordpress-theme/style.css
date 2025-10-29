@@ -1,0 +1,118 @@
+/*
+Theme Name: YesMoreBet
+Theme URI: https://yesmorebet.fr
+Author: YesMoreBet
+Author URI: https://yesmorebet.fr
+Description: Thème WordPress pour YesMoreBet - Animation de casino fictif 100% légale et sans argent réel
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: yesmorebet
+Tags: casino, événementiel, entertainment
+*/
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #FDC700;
+  --color-primary-dark: #D08700;
+  --color-primary-light: #FACC15;
+  --color-secondary: #CA8A04;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gray: #99A1AF;
+  --color-gray-light: rgba(255, 255, 255, 0.05);
+  --color-border: rgba(208, 135, 0, 0.2);
+  --font-quicksand: 'Quicksand', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-quicksand);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: linear-gradient(to right, #FDC700, #D08700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #FACC15, #CA8A04);
+  color: var(--color-black);
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-family: var(--font-quicksand);
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0px 10px 15px -3px rgba(250, 204, 21, 0.3);
+}
+
+.btn-primary:hover {
+  box-shadow: 0px 10px 20px -3px rgba(250, 204, 21, 0.5);
+  transform: scale(1.05);
+}
+
+/* Header Styles */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  z-index: 50;
+  border-bottom: 2px solid rgba(250, 204, 21, 0.1);
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: var(--color-black);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-gray);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 4rem;
+  }
+}

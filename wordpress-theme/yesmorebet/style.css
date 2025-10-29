@@ -1,0 +1,17 @@
+/*
+Theme Name: YesMoreBet
+Theme URI: https://yesmorebet.fr
+Author: Guillaume Peyrot
+Author URI: https://yesmorebet.fr
+Description: Thème WordPress pour YesMoreBet - Animation de casino fictif sur la Côte d'Azur
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: yesmorebet
+Tags: custom-menu, featured-images, theme-options, custom-header
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+*/
+
+/* Styles principaux du thème - les styles Tailwind seront chargés via functions.php */
